@@ -5,12 +5,18 @@ import { motion } from "framer-motion"; // Add animations
 import TechStack from "@/components/TechStack";
 import ParticlesBackground from "./ParticlesBackground";
 import { HiOutlineDocumentArrowDown } from "react-icons/hi2";
+import { useEffect, useState } from "react";
 
 const HeroSection = () => {
+    const [showParticles, setShowParticles] = useState(false);
+
+    useEffect(() => {
+      setShowParticles(true); // enable only after mount
+    }, []);
     return (
         <div className="relative h-screen w-full flex items-center justify-center text-white">
             {/* Particles Background */}
-            <ParticlesBackground />
+            {showParticles && <ParticlesBackground />} {/* Render only on client */}
             {/* social links */}
             <div className="absolute top-5 right-8 z-10">
                 <div className="flex items-center justify-end gap-4">
@@ -59,7 +65,7 @@ const HeroSection = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}
                 >
-                    Hi, I'm Shyam Saini
+                    Hi, I&apos;m Shyam Saini
                 </motion.h1>
 
                 <motion.p
