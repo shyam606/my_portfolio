@@ -1,103 +1,130 @@
-import Image from "next/image";
+"use client"
+import HeroSection from "@/components/HeroSection";
+import { motion } from "framer-motion"; // Add animations
+import { MdOutlineMailOutline } from "react-icons/md";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="">
+      <HeroSection />
+      {/*  */}
+      <div className="relative w-full">
+        <div className="my_container mt-5">
+          <motion.h1
+            className="text-3xl code_font font-bold mt-2 text-green-400"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          >
+            Experience
+          </motion.h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          {/* Sachtech Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }} className="backdrop-blur border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-semibold code_font text-green-400">Associate Software Engineer</h2>
+                <p className="text-md text-green-400 code_font">Sachtech Solution</p>
+              </div>
+              <p className="text-md text-green-400 font-bold">📆 Nov 2022 – Mar 2025</p>
+            </div>
+            <ul className="list-disc list-inside text-white mt-4 text-sm space-y-1">
+              <li>
+                Delivered <strong>15+ responsive web apps</strong> across domains like e-commerce, dating, healthcare, and document storage (Google Drive-style), with both user-facing sites and admin panels.
+              </li>
+              <li>
+                Engineered rich UI/UX using <strong>Tailwind CSS</strong>, <strong>animated components</strong>, and <strong>Fabric.js canvas</strong> for advanced editing features.
+              </li>
+              <li>
+                Integrated modern services including <strong>Firebase</strong> (auth, realtime DB, storage), <strong>Stripe</strong> payments, and <strong>social logins</strong> (Google, Facebook, Apple, LinkedIn).
+              </li>
+              <li>
+                Used <strong>Redux Toolkit</strong> and <strong>RTK Query</strong> for robust state and API management, while collaborating in <strong>Agile/Scrum</strong> teams to ensure high-quality, scalable code.
+              </li>
+            </ul>
+          </motion.div>
+
+          {/* Oodles Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }} className="backdrop-blur-md border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-semibold text-green-400 code_font">Assistant Consultant Software Developer</h2>
+                <p className="text-md text-green-400 code_font">Oodles Technologies</p>
+              </div>
+              <p className="text-md text-green-400 font-bold">📆 Dec 2021 – Aug 2022</p>
+            </div>
+            <ul className="list-disc list-inside text-white mt-4 text-sm space-y-1">
+              <li>
+                Worked on <strong>3 web applications</strong> including a calling app with real-time communication, and a hospital management system.
+              </li>
+              <li>
+                Integrated and handled real-time events using <strong>WebSockets</strong> for voice/video call functionality.
+              </li>
+              <li>
+                Designed and built responsive UI components using <strong>Tailwind CSS</strong> and added smooth UI transitions with animation libraries.
+              </li>
+              <li>
+                Collaborated in <strong>Agile teams</strong> to develop scalable modules and performed code optimizations for performance.
+              </li>
+            </ul>
+          </motion.div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </div>
+      {/*  Education*/}
+      <div className="relative w-full py-8">
+        <div className="my_container mt-5">
+          <motion.h1 className="text-3xl code_font font-bold mt-2 text-green-400"
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.5, duration: 1 }}
+          > Education </motion.h1>
+          {/* BCA */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="backdrop-blur-md border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-semibold code_font text-green-400">Bachelor of Computer Applications</h2> <p className="text-md text-green-400 code_font">IMS Roorkee</p>
+              </div>
+              <p className="text-md text-green-400 font-bold">📆 2017 – 2020</p>
+            </div>
+          </motion.div>
+          {/* MCA Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="backdrop-blur-md border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
+            <div className="flex items-center justify-between">
+              <div>
+                <h2 className="text-xl font-semibold text-green-400 code_font">Master of Computer Applications</h2> <p className="text-md text-green-400 code_font">IMS Roorkee</p>
+              </div>
+              <p className="text-md text-green-400 font-bold">📆 2020 – 2022</p>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+      {/* footer */}
+      <div className="relative flex items-center justify-end gap-2 text-center mr-4 pt-10 pb-4">
+        <MdOutlineMailOutline color="#fff" size={20}/>
+        <motion.p 
+           initial={{ opacity: 0, y: -10 }}
+           animate={{ opacity: 1, y: 0 }}
+           transition={{ delay: 0.5, duration: 1 }}
+        className="text-green-400 text-xl">shyamsainidbd2@gmail.com</motion.p>
+      </div>
+    </main>
   );
 }

@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap');
 @import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-code: 'Fira Code', monospace;
+  /* New custom property */
 }
 
 @theme inline {
@@ -15,12 +20,35 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
-    --foreground: #ededed;
+    /* --foreground: #ededed; */
   }
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior: smooth;
+    /* font-family: var(--font-sans); Using the custom property for sans font */
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(64, 253, 127);
+  border-radius: 2px;
+}
+
+/* Set the width of the scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+.code_font {
+  font-family: var(--font-code);
+}
+
+.hire_me_button {
+  font-size: 1.2rem;
+  border-radius: 12px;
+  padding: 8px 18px;
+}
+.my_container{
+  width: 70%;
+  margin-inline: auto;
 }
