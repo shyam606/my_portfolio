@@ -37,7 +37,7 @@ const HeroSection = () => {
                         <SlSocialLinkedin size={28} className="" />
                     </a>
                     <a
-                        href="/Shyam_Saini_latest.pdf"
+                        href="/Shyam_Saini_latest.pdf.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="transition-transform transform hover:scale-110"
