@@ -9,9 +9,9 @@ export default function Home() {
       <HeroSection />
       {/*  */}
       <div className="relative w-full">
-        <div className="my_container mt-5">
+        <div className="my_container w-[90%] lg-w-[70%] mt-5">
           <motion.h1
-            className="text-3xl code_font font-bold mt-2 text-green-400"
+            className="text-2xl lg:text-3xl code_font font-bold mt-2 text-green-400"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
@@ -24,13 +24,13 @@ export default function Home() {
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut" }} className="backdrop-blur border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
-            <div className="flex items-center justify-between">
+            transition={{ duration: 0.6, ease: "easeOut" }} className="backdrop-blur border border-green-400 rounded-xl p-5 mt-4 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
+            <div className="flex flex-col md:flex-row items-start lg:items-center justify-between">
               <div>
-                <h2 className="text-xl font-semibold code_font text-green-400">Associate Software Engineer</h2>
+                <h2 className="text-lg lg:text-xl font-semibold code_font text-green-400 text-wrap sm:text-nowrap">Associate Software Engineer</h2>
                 <p className="text-md text-green-400 code_font">Sachtech Solution</p>
               </div>
-              <p className="text-md text-green-400 font-bold">📆 Nov 2022 – Mar 2025</p>
+              <p className="text-sm md:text-md text-green-400 font-bold">📆 Nov 2022 – Mar 2025</p>
             </div>
             <ul className="list-disc list-inside text-white mt-4 text-sm space-y-1">
               <li>
@@ -54,12 +54,12 @@ export default function Home() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }} className="backdrop-blur-md border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row items-start lg:items-center justify-between">
               <div>
-                <h2 className="text-xl font-semibold text-green-400 code_font">Assistant Consultant Software Developer</h2>
+                <h2 className="text-lg lg:text-xl font-semibold text-green-400 code_font text-wrap sm:text-nowrap">Assistant Consultant Software Developer</h2>
                 <p className="text-md text-green-400 code_font">Oodles Technologies</p>
               </div>
-              <p className="text-md text-green-400 font-bold">📆 Dec 2021 – Aug 2022</p>
+              <p className="text-sm md:text-md text-green-400 font-bold">📆 Dec 2021 – Aug 2022</p>
             </div>
             <ul className="list-disc list-inside text-white mt-4 text-sm space-y-1">
               <li>
@@ -80,50 +80,59 @@ export default function Home() {
       </div>
       {/*  Education*/}
       <div className="relative w-full py-8">
-        <div className="my_container mt-5">
-          <motion.h1 className="text-3xl code_font font-bold mt-2 text-green-400"
+        <div className="my_container w-[90%] lg-w-[70%] mt-3">
+          <motion.h1 className="text-2xl lg:text-3xl code_font font-bold text-green-400"
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 1 }}
           > Education </motion.h1>
+           {/* MCA Card */}
+           <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="backdrop-blur-md border border-green-400 rounded-xl px-2 md:px-5 py-5 mt-4 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
+            <div className="flex flex-col md:flex-row items-start lg:items-center justify-between w-full">
+              <div className="w-full">
+                <h2 className="text-lg lg:text-xl font-semibold text-green-400 code_font">Master of Computer Applications</h2>
+                <div className="flex justify-between border w-full">
+                  <p className="text-md text-green-400 code_font">IMS Roorkee</p>
+                  <p className="text-sm md:text-md text-green-400 font-bold block lg:hidden">📆 2020 – 2022</p>
+                </div>
+              </div>
+              <p className="text-sm md:text-md text-green-400 font-bold hidden lg:block">📆 2020 – 2022</p>
+            </div>
+          </motion.div>
           {/* BCA */}
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="backdrop-blur-md border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
-            <div className="flex items-center justify-between">
-              <div>
-                <h2 className="text-xl font-semibold code_font text-green-400">Bachelor of Computer Applications</h2> <p className="text-md text-green-400 code_font">IMS Roorkee</p>
+            className="backdrop-blur-md border border-green-400 rounded-xl px-2 md:px-5 py-5 mt-4 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01] w-full">
+            <div className="flex flex-col md:flex-row items-start lg:items-center justify-between border  w-full">
+              <div className="w-full">
+                <h2 className="text-lg lg:text-xl font-semibold code_font text-green-400">Bachelor of Computer Applications</h2>
+                <div className="flex justify-between border w-full">
+                  <p className="text-md text-green-400 code_font">IMS Roorkee</p>
+                  <p className="text-sm md:text-md text-green-400 font-bold block lg:hidden">📆 2017 – 2020</p>
+                </div>
               </div>
-              <p className="text-md text-green-400 font-bold">📆 2017 – 2020</p>
+              <p className="text-sm md:text-md text-green-400 font-bold hidden lg:block">📆 2017 – 2020</p>
             </div>
           </motion.div>
-          {/* MCA Card */}
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            className="backdrop-blur-md border border-green-400 rounded-xl p-5 mt-7 shadow-lg shadow-green-500/10 transition-transform hover:scale-[1.01]">
-            <div className="flex items-center justify-between">
-              <div>
-                <h2 className="text-xl font-semibold text-green-400 code_font">Master of Computer Applications</h2> <p className="text-md text-green-400 code_font">IMS Roorkee</p>
-              </div>
-              <p className="text-md text-green-400 font-bold">📆 2020 – 2022</p>
-            </div>
-          </motion.div>
+         
         </div>
       </div>
       {/* footer */}
-      <div className="relative flex items-center justify-end gap-2 text-center mr-4 pt-10 pb-4">
-        <MdOutlineMailOutline color="#fff" size={20}/>
-        <motion.p 
-           initial={{ opacity: 0, y: -10 }}
-           animate={{ opacity: 1, y: 0 }}
-           transition={{ delay: 0.5, duration: 1 }}
-        className="text-green-400 text-xl">shyamsainidbd2@gmail.com</motion.p>
+      <div className="relative flex items-center justify-center lg:justify-end gap-2 text-center mr-4 pt-8 pb-4">
+        <MdOutlineMailOutline color="#fff" size={20} />
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1 }}
+          className="text-green-400 text-xl">shyamsainidbd2@gmail.com</motion.p>
       </div>
     </main>
   );

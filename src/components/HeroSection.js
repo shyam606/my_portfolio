@@ -60,7 +60,7 @@ const HeroSection = () => {
             {/* middle content */}
             <div className="absolute z-10 text-center">
                 <motion.h1
-                    className="text-5xl code_font font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400"
+                    className="text-3xl lg:text-5xl code_font font-bold text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-400 to-purple-400"
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 1 }}

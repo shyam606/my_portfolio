@@ -49,6 +49,6 @@ body {
   padding: 8px 18px;
 }
 .my_container{
-  width: 70%;
+  /* width: 70%; */
   margin-inline: auto;
 }
